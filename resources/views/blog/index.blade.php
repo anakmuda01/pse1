@@ -12,8 +12,8 @@
       <div class="carousel-item slide-image active">
         <div class="banner-kosong" style="background-image: url('/img/muka.jpg');"></div>
         <div class="carousel-caption d-md-block caption-kosong">
-          <h5 class="slide-judul animated">Sekilas Profile PSE 1</h5>
-          <p class="slide-ket lead animated">Puskesmas Simpang Empat adalah puskesmas rawat jalan yang berjarak 30km dari ibukota kabupaten Banjar, Martapura, dan berjarak 69km dari ibukota propinsi, Banjarmasin. Wilayah kerja Puskesmas Simpang Empat meliputi 2 Kecamatan yang terdiri dari 16 desa, 10 desa masuk di wilayah kecamatan Simpang Empat (S E) dan 6 desa masuk di wilayah Kecamatan Cinta Puri Darusalam (C D).</p>
+          <h5 data-aos="zoom-in" class="slide-judul">Sekilas Profile PSE 1</h5>
+          <p data-aos="zoom-in" class="slide-ket lead">Puskesmas Simpang Empat adalah puskesmas rawat jalan yang berjarak 30km dari ibukota kabupaten Banjar, Martapura, dan berjarak 69km dari ibukota propinsi, Banjarmasin. Wilayah kerja Puskesmas Simpang Empat meliputi 2 Kecamatan yang terdiri dari 16 desa, 10 desa masuk di wilayah kecamatan Simpang Empat (S E) dan 6 desa masuk di wilayah Kecamatan Cinta Puri Darusalam (C D).</p>
         </div>
       </div>
       <div class="carousel-item slide-image">
@@ -34,9 +34,9 @@
     </a>
   </div>
   {{-- slide off --}}
-  <div class="container-fluid">
+  <div class="container-fluid op-box">
     <div class="row">
-      <div class="col-md-4 scroll-animations">
+      <div data-aos="fade-right" class="col-md-4 scroll-animations">
         <div class="animated">
           <div class="box-pro card">
             <div class="card-header box-header text-center bg-transparent">
@@ -69,7 +69,7 @@
         </div>
       </div>
 
-      <div class="col-md-4 scroll-animations">
+      <div data-aos="fade-right" class="col-md-4 scroll-animations">
         <div class="animated">
           <div class="box-pro card">
             <div class="card-header box-header text-center bg-transparent">
@@ -94,7 +94,7 @@
         </div>
       </div>
 
-      <div class="col-md-4 scroll-animations">
+      <div data-aos="fade-right" class="col-md-4 scroll-animations">
         <div class="animated">
           <div class="box-pro card">
             <div class="card-header box-header text-center bg-transparent">
@@ -119,7 +119,7 @@
     </div>
   </div>
 
-  <div class="container-fluid quote-wrapper news-box animated">
+  <div data-aos="fade-right" class="container-fluid quote-wrapper news-box">
     <div class="row">
       <div class="col-md-12">
         <i class="fa fa-quote-right fa-3x quote"></i>
@@ -131,8 +131,10 @@
   </div>
 
   <div class="container-fluid">
-    <div class="row animated post-wrap">
-      <div class="col-md-2 kategori news-box animated">
+
+    <div data-aos="fade-right" class="row animated post-wrap">
+
+      <div class="col-md-2 kategori news-box">
         <ul class="nav my-nav" id="myTab" role="tablist">
           <li class="active">
             <a class="tab-kat nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><i class="fa fa-newspaper-o"></i>&nbsp;Semua</a>
@@ -145,11 +147,38 @@
           </li>
         </ul>
       </div>
+
       <div class="col-md-10 isi-kategori">
+
         <div class="tab-content" id="myTabContent">
+
           <div class="tab-pane show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
             <div class="row">
-              <div class="col-md-4 isi-kategori-item news-box  animated">
+              <div data-aos="fade-right" class="col-md-4 isi-kategori-item news-box animated">
+                <div class="card" style="min-width: 20rem; min-height:25.5rem;">
+                  <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
+                  <div class="card-body isi-news">
+                    <h5 class="card-title">SEMUA</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <span class="tgl">13 November 2018</span>
+                      </div>
+                      <div class="col-md-12">
+                        <span class="kat">tag : Kesehatan, Penyuluhan</span>
+                      </div>
+                      <div class="col-md-12">
+                        <span class="penulis">oleh Fathurrahman S</span>
+                      </div>
+                    </div>
+                    <a href="#" class="btn btn-pse">Baca selengkapnya..</a>
+                  </div>
+                </div>
+              </div>
+              <div data-aos="fade-right" class="col-md-4 isi-kategori-item news-box animated">
                 <div class="card" style="min-width: 20rem; min-height:25.5rem;">
                   <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
                   <div class="card-body isi-news">
@@ -172,7 +201,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 isi-kategori-item news-box  animated">
+              <div data-aos="fade-right" class="col-md-4 isi-kategori-item news-box animated">
                 <div class="card" style="min-width: 20rem; min-height:25.5rem;">
                   <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
                   <div class="card-body isi-news">
@@ -195,30 +224,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 isi-kategori-item news-box  animated">
-                <div class="card" style="min-width: 20rem; min-height:25.5rem;">
-                  <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
-                  <div class="card-body isi-news">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <span class="tgl">13 November 2018</span>
-                      </div>
-                      <div class="col-md-12">
-                        <span class="kat">tag : Kesehatan, Penyuluhan</span>
-                      </div>
-                      <div class="col-md-12">
-                        <span class="penulis">oleh Fathurrahman S</span>
-                      </div>
-                    </div>
-                    <a href="#" class="btn btn-pse">Baca selengkapnya..</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12 isi-kategori-item news-box  animated">
+              <div data-aos="fade-right" class="col-md-12 isi-kategori-item news-box animated">
                 <div class="card">
                   <div class="card-body">
                     <a href="#" class="btn btn-pse btn-block">Berita lainya..</a>
@@ -229,7 +235,30 @@
           </div>
           <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
             <div class="row">
-              <div class="col-md-4 isi-kategori-item news-box  animated">
+              <div data-aos="fade-right" class="col-md-4 isi-kategori-item news-box animated">
+                <div class="card" style="min-width: 20rem; min-height:25.5rem;">
+                  <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
+                  <div class="card-body isi-news">
+                    <h5 class="card-title">KEGIATAN PKM</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <span class="tgl">13 November 2018</span>
+                      </div>
+                      <div class="col-md-12">
+                        <span class="kat">tag : Kesehatan, Penyuluhan</span>
+                      </div>
+                      <div class="col-md-12">
+                        <span class="penulis">oleh Fathurrahman S</span>
+                      </div>
+                    </div>
+                    <a href="#" class="btn btn-pse">Baca selengkapnya..</a>
+                  </div>
+                </div>
+              </div>
+              <div data-aos="fade-right" class="col-md-4 isi-kategori-item news-box animated">
                 <div class="card" style="min-width: 20rem; min-height:25.5rem;">
                   <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
                   <div class="card-body isi-news">
@@ -252,7 +281,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 isi-kategori-item news-box  animated">
+              <div data-aos="fade-right" class="col-md-4 isi-kategori-item news-box animated">
                 <div class="card" style="min-width: 20rem; min-height:25.5rem;">
                   <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
                   <div class="card-body isi-news">
@@ -275,30 +304,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 isi-kategori-item news-box  animated">
-                <div class="card" style="min-width: 20rem; min-height:25.5rem;">
-                  <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
-                  <div class="card-body isi-news">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <span class="tgl">13 November 2018</span>
-                      </div>
-                      <div class="col-md-12">
-                        <span class="kat">tag : Kesehatan, Penyuluhan</span>
-                      </div>
-                      <div class="col-md-12">
-                        <span class="penulis">oleh Fathurrahman S</span>
-                      </div>
-                    </div>
-                    <a href="#" class="btn btn-pse">Baca selengkapnya..</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12 isi-kategori-item news-box  animated">
+              <div data-aos="fade-right" class="col-md-12 isi-kategori-item news-box animated">
                 <div class="card">
                   <div class="card-body">
                     <a href="#" class="btn btn-pse btn-block">Berita lainya..</a>
@@ -309,7 +315,30 @@
           </div>
           <div class="tab-pane" id="contact" role="tabpanel" aria-labelledby="contact-tab">
             <div class="row">
-              <div class="col-md-4 isi-kategori-item news-box  animated">
+              <div data-aos="fade-right" class="col-md-4 isi-kategori-item news-box animated">
+                <div class="card" style="min-width: 20rem; min-height:25.5rem;">
+                  <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
+                  <div class="card-body isi-news">
+                    <h5 class="card-title">Penyuluhan</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <span class="tgl">13 November 2018</span>
+                      </div>
+                      <div class="col-md-12">
+                        <span class="kat">tag : Kesehatan, Penyuluhan</span>
+                      </div>
+                      <div class="col-md-12">
+                        <span class="penulis">oleh Fathurrahman S</span>
+                      </div>
+                    </div>
+                    <a href="#" class="btn btn-pse">Baca selengkapnya..</a>
+                  </div>
+                </div>
+              </div>
+              <div data-aos="fade-right" class="col-md-4 isi-kategori-item news-box animated">
                 <div class="card" style="min-width: 20rem; min-height:25.5rem;">
                   <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
                   <div class="card-body isi-news">
@@ -332,7 +361,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 isi-kategori-item news-box  animated">
+              <div data-aos="fade-right" class="col-md-4 isi-kategori-item news-box animated">
                 <div class="card" style="min-width: 20rem; min-height:25.5rem;">
                   <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
                   <div class="card-body isi-news">
@@ -355,30 +384,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 isi-kategori-item news-box  animated">
-                <div class="card" style="min-width: 20rem; min-height:25.5rem;">
-                  <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
-                  <div class="card-body isi-news">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <span class="tgl">13 November 2018</span>
-                      </div>
-                      <div class="col-md-12">
-                        <span class="kat">tag : Kesehatan, Penyuluhan</span>
-                      </div>
-                      <div class="col-md-12">
-                        <span class="penulis">oleh Fathurrahman S</span>
-                      </div>
-                    </div>
-                    <a href="#" class="btn btn-pse">Baca selengkapnya..</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12 isi-kategori-item news-box  animated">
+              <div data-aos="fade-right" class="col-md-12 isi-kategori-item news-box animated">
                 <div class="card">
                   <div class="card-body">
                     <a href="#" class="btn btn-pse btn-block">Berita lainya..</a>
@@ -388,11 +394,14 @@
             </div>
           </div>
         </div>
+
       </div>
+
     </div>
+
   </div>
 
-  <div class="container-fluid quote-wrapper news-box animated">
+  <div data-aos="fade-right" class="container-fluid quote-wrapper news-box">
     <div class="row">
       <div class="col-md-12">
         <i class="fa fa-quote-right fa-3x quote"></i>
@@ -404,7 +413,7 @@
   </div>
 
   <!-- Swiper -->
-  <div class="swiper-container swiper-wrap">
+  <div data-aos="fade-right" class="swiper-container swiper-wrap">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <div class="imgBx">
@@ -451,7 +460,7 @@
     <div class="swiper-pagination"></div>
   </div>
 
-  <div class="container-fluid quote-wrapper news-box animated">
+  <div data-aos="fade-right" class="container-fluid quote-wrapper news-box animated">
     <div class="row">
       <div class="col-md-12">
         <i class="fa fa-quote-right fa-3x quote"></i>

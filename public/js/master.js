@@ -1,64 +1,139 @@
 $(document).ready(function() {
+  // $(window).scrollTop(function(){
+  //   $('.scroll-animations .animated').each(function() {
+  //     if (isScrolledIntoView(this) === true) {
+  //       $(this).addClass('fadeInLeft');
+  //     }
+  //   });
+  //   $('.news-box').each(function() {
+  //     if (isScrolledIntoView(this) === true) {
+  //       $(this).addClass('fadeInRight');
+  //     }
+  //   });
+  //   $('.swiper-wrap').each(function() {
+  //     if (isScrolledIntoView(this) === true) {
+  //       $(this).addClass('fadeInRight');
+  //     }
+  //   });
+  // });
 
-  $(window).scrollTop(function(){
-    $('.scroll-animations .animated').each(function() {
-      if (isScrolledIntoView(this) === true) {
-        $(this).addClass('fadeInLeft');
-      }
-    });
-    $('.news-box').each(function() {
-      if (isScrolledIntoView(this) === true) {
-        $(this).addClass('fadeInRight');
-      }
-    });
-  });
+  // $('.slide-judul').css('opacity','1').addClass('zoomIn');
+  // $('.slide-ket').css('opacity','1').addClass('zoomIn');
 
-  $('.slide-judul').css('opacity','1').addClass('zoomIn');
-  $('.slide-ket').css('opacity','1').addClass('zoomIn');
-
-  $(window).scroll(function(){
-    var navi = $('.navi').offset().top;
-    if ($(this).scrollTop() > 100) {
-        $('.navi').addClass('fixed-top slideInDown');
-    } else {
-        $('.navi').removeClass('fixed-top slideInDown');
-    }
-  });
-
-  // Check if element is scrolled into view
-  function isScrolledIntoView(elem) {
-    var docViewTop = $(window).scrollTop();
-    var docViewBottom = docViewTop + $(window).height();
-
-    var elemTop = $(elem).offset().top;
-    var elemBottom = elemTop + $(elem).height()-200;
-
-    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-  }
-  // If element is scrolled into view, fade it in
-
-  // Check if element is scrolled into view
-  function isScrolled(elem) {
-    var docViewTop = $(window).scrollTop();
-
-    var elemTop = $(elem).offset().top;
-
-    return (elemTop >= docViewTop);
-  }
-  // If element is scrolled into view, fade it in
+  var didScroll = false;
 
   $(window).scroll(function() {
-    $('.scroll-animations .animated').each(function() {
-      if (isScrolledIntoView(this) === true) {
-        $(this).addClass('fadeInLeft');
-      }
-    });
-    $('.news-box').each(function() {
-      if (isScrolledIntoView(this) === true) {
-        $(this).addClass('fadeInRight');
-      }
-    });
+      didScroll = true;
   });
+
+  setInterval(function(){
+    if (didScroll) {
+      didScroll = false;
+      var navi = $('.navi').offset().top;
+      if ($(this).scrollTop() > 100) {
+          $('.navi').addClass('fixed-top fadeInDown');
+      } else {
+          $('.navi').removeClass('fixed-top fadeInDown');
+      }
+    }
+  },100);
+  //
+  // Check if element is scrolled into view
+  // function isScrolledIntoView(elem) {
+  //   var docViewTop = $(window).scrollTop();
+  //   var docViewBottom = docViewTop + $(window).height();
+  //
+  //   var elemTop = $(elem).offset().top;
+  //   var elemBottom = elemTop + $(elem).height()-200;
+  //
+  //   return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+  // }
+  // If element is scrolled into view, fade it in
+
+  // Check if element is scrolled into view
+  // function isScrolled(elem) {
+  //   var docViewTop = $(window).scrollTop();
+  //
+  //   var elemTop = $(elem).offset().top;
+  //
+  //   return (elemTop >= docViewTop);
+  // }
+  // If element is scrolled into view, fade it in
+
+  // $(window).scroll(function() {
+  //   $('.scroll-animations .animated').each(function() {
+  //     if (isScrolledIntoView(this) === true) {
+  //       $(this).addClass('fadeInLeft');
+  //     }
+  //   });
+  //   $('.news-box').each(function() {
+  //     if (isScrolledIntoView(this) === true) {
+  //       $(this).addClass('fadeInRight');
+  //     }
+  //   });
+  //   $('.swiper-wrap').each(function() {
+  //     if (isScrolledIntoView(this) === true) {
+  //       $(this).addClass('fadeInRight');
+  //     }
+  //   });
+  // });
+
+  // var didScroll = false;
+  //
+  // $(window).scroll(function() {
+  //     didScroll = true;
+  // });
+  //
+  // setInterval(function() {
+  //   if (didScroll) {
+  //     didScroll = false;
+  //
+  //     var navi = $('.navi').offset().top;
+  //     if ($(this).scrollTop() > 100) {
+  //         $('.navi').addClass('fixed-top fadeInDown');
+  //     } else {
+  //         $('.navi').removeClass('fixed-top fadeInDown');
+  //     }
+  //
+  //     // Check if element is scrolled into view
+  //     function isScrolledIntoView(elem) {
+  //       var docViewTop = $(window).scrollTop();
+  //       var docViewBottom = docViewTop + $(window).height();
+  //
+  //       var elemTop = $(elem).offset().top;
+  //       var elemBottom = elemTop + $(elem).height()-200;
+  //
+  //       return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+  //     }
+  //     // If element is scrolled into view, fade it in
+  //
+  //     // Check if element is scrolled into view
+  //     function isScrolled(elem) {
+  //       var docViewTop = $(window).scrollTop();
+  //
+  //       var elemTop = $(elem).offset().top;
+  //
+  //       return (elemTop >= docViewTop);
+  //     }
+  //     // If element is scrolled into view, fade it in
+  //
+  //     $('.scroll-animations .animated').each(function() {
+  //       if (isScrolledIntoView(this) === true) {
+  //         $(this).addClass('fadeInLeft');
+  //       }
+  //     });
+  //     $('.news-box').each(function() {
+  //       if (isScrolledIntoView(this) === true) {
+  //         $(this).addClass('fadeInRight');
+  //       }
+  //     });
+  //     $('.swiper-wrap').each(function() {
+  //       if (isScrolledIntoView(this) === true) {
+  //         $(this).addClass('fadeInRight');
+  //       }
+  //     });
+  //   }
+  // }, 25);
 
   $('.link-cari').on('click',function(e){
     e.preventDefault();
@@ -80,7 +155,7 @@ $(document).ready(function() {
   });
 
   $(".carousel").on("touchstart", function(event){
-    $('.slide-bulat li').removeClass('hov');
+    $('.fade-bulat li').removeClass('hov');
     var xClick = event.originalEvent.touches[0].pageX;
       $(this).one("touchmove", function(event){
           var xMove = event.originalEvent.touches[0].pageX;
@@ -107,6 +182,9 @@ $(document).ready(function() {
         tabs.eq(0).addClass('active');
       }
       // Use the Bootsrap tab show method
+      $('.isi-kategori-item').each(function(){
+        $(this).addClass('fadeInRight');
+      })
       next.tab('show');
   };
   // Tab Cycle function
@@ -159,7 +237,7 @@ $(document).ready(function() {
       stretch: 0,
       depth: 100,
       modifier: 1,
-      slideShadows : true,
+      fadeShadows : true,
     },
     pagination: {
       el: '.swiper-pagination',
@@ -167,4 +245,7 @@ $(document).ready(function() {
     loop : true
   });
 
+  AOS.init({
+    startEvent: 'load',
+  });
 });

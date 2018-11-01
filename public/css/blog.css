@@ -317,20 +317,20 @@ body{
   font-family: Roboto Slab,Georgia,Times New Roman,Times,serif;
   font-size: 2em;
   font-weight: bold;
-  opacity: 0;
+  opacity: 1;
 }
 .slide-ket{
-  opacity: 0;
+  opacity: 1;
 }
 
 .scroll-animations {
-  display: flex;
+  display : flex;
 }
 
 .scroll-animations .animated{
   flex-grow: 1;
   padding: 2em 0.3em;
-  opacity: 0;
+  opacity: 1;
   color: #333;
 }
 
@@ -736,7 +736,7 @@ body{
 }
 
 .news-box{
-  opacity: 0;
+  opacity: 1;
 }
 .isi-news{
   min-height: 9rem;
@@ -759,6 +759,9 @@ body{
 }
 
 /* swiper css */
+.swiper-wrap{
+  opacity: 1;
+}
 .swiper-container {
  width: 100%;
  padding-top: 50px;
@@ -816,6 +819,12 @@ body{
 .isi-quote p{
   font-size: 18px;
   color: #6d6d6d;
+}
+.op-on{
+  opacity: 1;
+}
+.op-box{
+  position: relative;
 }
 @media (min-width: 767px){
   .footer-wrapper {
@@ -942,5 +951,11 @@ body{
 @media (max-width: 320px){
   .telpon{
     font-size: 1em;
+  }
+  .animated{
+    opacity: 1;
+  }
+  .scroll-animations .animated{
+    opacity: 1;
   }
 }

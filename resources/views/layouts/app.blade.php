@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/aos.js') }}" defer></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
@@ -19,7 +20,13 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/swiper.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/blog.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/aos.css') }}" rel="stylesheet">
     <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
+
+
+    <!--[if lte IE 9]>
+          <link href='/PATH/TO/FOLDER/css/animations-ie-fix.css' rel='stylesheet'>
+    <![endif]-->
 
 
     <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
@@ -211,5 +218,32 @@
 
 <script src="{{ asset('js/swiper.min.js')}}" defer></script>
 <script src="{{ asset('js/master.js')}}" defer></script>
+<script>
+  setTimeout(function(){
+    navigator.sayswho= (function(){
+        var ua= navigator.userAgent, tem,
+        M= ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+        if(/trident/i.test(M[1])){
+            tem=  /\brv[ :]+(\d+)/g.exec(ua) || [];
+            return 'IE '+(tem[1] || '');
+        }
+        if(M[1]=== 'Chrome'){
+            tem= ua.match(/\b(OPR|Edge)\/(\d+)/);
+            if(tem!= null) return tem.slice(1).join(' ').replace('OPR', 'Opera');
+        }
+        M= M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
+        if((tem= ua.match(/version\/(\d+)/i))!= null) M.splice(1, 1, tem[1]);
+        return M.join(' ');
+    })();
+
+    console.log(navigator.sayswho);
+    var agen = navigator.sayswho;
+    var arr = agen.split(" ");
+
+    if(arr[1] < 40) {
+      alert("browser anda tidak support ... disarankan menggunakan Google Chrome versi terbaru yang merupakan browser terbaik saat ini")
+    }
+  },3000);
+</script>
 </body>
 </html>
