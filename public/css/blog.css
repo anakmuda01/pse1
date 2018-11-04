@@ -17,8 +17,11 @@ body{
   background: linear-gradient(-90deg, rgba(1, 82, 89, 0.9),rgba(27, 188, 217, 0.84));
   padding: 25px;
 }
-
+.navbar-wrapper{
+  height: auto;
+}
 .navbar-pse{
+  top:auto;
   box-shadow: none;
   background: white;
   padding: 10px;
@@ -41,6 +44,8 @@ body{
 
 .fixed-top {
   position: fixed;
+  top:0; left:0;
+  width: 100%;
 }
 .sosial-list{
   margin: 0;
@@ -323,12 +328,12 @@ body{
   opacity: 1;
 }
 
-.scroll-animations {
+/* .scroll-animations {
   display : flex;
-}
+} */
 
 .scroll-animations .animated{
-  flex-grow: 1;
+  /* flex-grow: 1; */
   padding: 2em 0.3em;
   opacity: 1;
   color: #333;
@@ -679,22 +684,6 @@ body{
 .post-wrap{
   background: #fff;
 }
-@media (max-width: 767px){
-  .footer-wrapper {
-        float: left;
-        width: 100%;
-        position: relative;
-        z-index: -1;
-        bottom: 0;
-        left: 0;
-  }
-  .content-wrapper {
-      float: left;
-      width: 100%;
-      margin-bottom: 0px;
-      background: #fff;
-  }
-}
 
 .bottom-footer {
     background: #2f3232;
@@ -727,7 +716,7 @@ body{
     margin: 0px;
 }
 
-.kategori, .isi-kategori-item{
+.kategori, .isi-kategori-item, .post-berita-lainya{
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -760,7 +749,7 @@ body{
 
 /* swiper css */
 .swiper-wrap{
-  opacity: 1;
+  display: none;
 }
 .swiper-container {
  width: 100%;
@@ -805,7 +794,7 @@ body{
 .quote-wrapper{
   text-align: center;
   background-color: #f6f6f6;
-  padding: 2em;
+  padding: 2.5em;
   border-top: 4px solid #cbcbcb;
   border-bottom: 4px solid #cbcbcb;
 }
@@ -826,6 +815,39 @@ body{
 .op-box{
   position: relative;
 }
+
+.judul-wrap{
+  margin-bottom: 10px !important;
+  border-bottom: 1px solid rgb(153, 159, 159) ;
+  padding: 0;
+}
+.judul-isi{
+  font-size: 24px;
+  color: #222222;
+  border-bottom: 4px solid rgb(9, 104, 117);
+}
+.link-berita{
+  display: block;
+}
+
+/* media query */
+@media (max-width: 767px){
+  .footer-wrapper {
+        float: left;
+        width: 100%;
+        position: relative;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+  }
+  .content-wrapper {
+      float: left;
+      width: 100%;
+      margin-bottom: 0px;
+      background: #fff;
+  }
+}
+
 @media (min-width: 767px){
   .footer-wrapper {
     position: relative!important;
@@ -850,6 +872,12 @@ body{
   }
   .foot-menu {
     padding-left: 25px;
+  }
+  .single-wrap{
+    padding-top: 15px;
+  }
+  .posts-wrap, .single-wrap{
+    min-height: 100vh;
   }
 }
 
@@ -894,11 +922,11 @@ body{
   }
   .slide-judul{
     font-size: 0.9em;
-    opacity: 0;
+    opacity: 1;
   }
   .slide-ket{
     font-size: 0.7em;
-    opacity: 0;
+    opacity: 1;
   }
 
   .warming{
@@ -947,6 +975,7 @@ body{
   .isi-quote{
     padding: 1.5em 2em 0 2em;
   }
+
 }
 @media (max-width: 320px){
   .telpon{

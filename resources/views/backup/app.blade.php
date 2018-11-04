@@ -61,52 +61,76 @@
               </div>
             </div>
           </div>
-          <div class="navbar-wrapper">
-            <nav class="navbar navbar-expand-lg navbar-light navbar-pse animated navi">
-              <a class="navbar-brand" href="/blog"><i class="fa fa-home"></i></a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
 
-              <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nor nav-link" href="#">Profil</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nor nav-link" href="#">Features</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nor nav-link" href="#">Pricing</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Dropdown link
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <div class="dropright">
-                        <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Dropdown link
-                        </a>
-                        <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                        </div>
+          <nav class="navbar navbar-expand-lg navbar-light navbar-pse animated navi">
+            <a class="navbar-brand" href="/blog"><i class="fa fa-home"></i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown link
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <div class="dropright">
+                      <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown link
+                      </a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
                       </div>
                     </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="tombol-cari">
-                <a href="#" class="link-cari rounded"><i class="fa fa-search"></i></a>
-              </div>
-              <div class="banner-cari animated">
-                <input type="text" placeholder="Cari di web ini .....">
-              </div>
-            </nav>
-          </div>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropright">
+                      <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown link
+                      </a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nor nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nor nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown link
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropright">
+                      <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown link
+                      </a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="tombol-cari">
+              <a href="#" class="link-cari rounded"><i class="fa fa-search"></i></a>
+            </div>
+            <div class="banner-cari animated">
+              <input type="text" placeholder="Cari di web ini .....">
+            </div>
+          </nav>
+
         </div>
 
 
@@ -191,7 +215,7 @@
     </div>
 
 
-<script src="{{ asset('js/jquery-scrolltofixed-min.js')}}" defer></script>
+
 <script src="{{ asset('js/swiper.min.js')}}" defer></script>
 <script src="{{ asset('js/master.js')}}" defer></script>
 {{-- <script>

@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container posts-wrap">
   <div class="row justify-content-between">
     <div class="col-md-8">
       <div class="row">
-        <div class="col-md-6 isi-kategori-item news-box animated">
+        <div class="col-md-6 isi-kategori-item gaya">
           <div class="card mx-auto" style="max-width: 22rem; max-height:28rem;">
             <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
             <div class="card-body">
@@ -27,7 +27,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 isi-kategori-item news-box animated">
+        <div class="col-md-6 isi-kategori-item gaya">
           <div class="card mx-auto" style="max-width: 22rem; max-height:28rem;">
             <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
             <div class="card-body">
@@ -49,7 +49,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 isi-kategori-item news-box animated">
+        <div class="col-md-6 isi-kategori-item gaya">
           <div class="card mx-auto" style="max-width: 22rem; max-height:28rem;">
             <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
             <div class="card-body">
@@ -71,7 +71,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 isi-kategori-item news-box animated">
+        <div class="col-md-6 isi-kategori-item gaya">
           <div class="card mx-auto" style="max-width: 22rem; max-height:28rem;">
             <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
             <div class="card-body">
@@ -93,7 +93,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 isi-kategori-item news-box animated">
+        <div class="col-md-6 isi-kategori-item gaya">
           <div class="card mx-auto" style="max-width: 22rem; max-height:28rem;">
             <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
             <div class="card-body">
@@ -115,7 +115,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 isi-kategori-item news-box animated">
+        <div class="col-md-6 isi-kategori-item gaya">
           <div class="card mx-auto" style="max-width: 22rem; max-height:28rem;">
             <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
             <div class="card-body">
@@ -137,7 +137,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 isi-kategori-item news-box animated">
+        <div class="col-md-6 isi-kategori-item gaya">
           <div class="card mx-auto" style="max-width: 22rem; max-height:28rem;">
             <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
             <div class="card-body">
@@ -159,7 +159,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 isi-kategori-item news-box animated">
+        <div class="col-md-6 isi-kategori-item gaya">
           <div class="card mx-auto" style="max-width: 22rem; max-height:28rem;">
             <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
             <div class="card-body">
@@ -181,7 +181,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 isi-kategori-item news-box animated">
+        <div class="col-md-6 isi-kategori-item gaya">
           <div class="card mx-auto" style="max-width: 22rem; max-height:28rem;">
             <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
             <div class="card-body">
@@ -203,7 +203,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 isi-kategori-item news-box animated">
+        <div class="col-md-6 isi-kategori-item gaya">
           <div class="card mx-auto" style="max-width: 22rem; max-height:28rem;">
             <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
             <div class="card-body">
@@ -253,7 +253,7 @@
   </div>
 </div>
 
-<div class="container-fluid quote-wrapper news-box animated">
+<div class="container-fluid quote-wrapper gaya">
   <div class="row">
     <div class="col-md-12">
       <i class="fa fa-quote-right fa-3x quote"></i>

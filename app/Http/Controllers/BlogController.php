@@ -49,7 +49,7 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('blog.single-post');
     }
 
     /**

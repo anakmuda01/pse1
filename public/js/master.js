@@ -20,23 +20,25 @@ $(document).ready(function() {
   // $('.slide-judul').css('opacity','1').addClass('zoomIn');
   // $('.slide-ket').css('opacity','1').addClass('zoomIn');
 
-  var didScroll = false;
-
-  $(window).scroll(function() {
-      didScroll = true;
-  });
-
-  setInterval(function(){
-    if (didScroll) {
-      didScroll = false;
-      var navi = $('.navi').offset().top;
-      if ($(this).scrollTop() > 100) {
-          $('.navi').addClass('fixed-top fadeInDown');
-      } else {
-          $('.navi').removeClass('fixed-top fadeInDown');
-      }
-    }
-  },100);
+  // var didScroll = false;
+  //
+  // $(window).scroll(function() {
+  //     didScroll = true;
+  // });
+  //
+  // setInterval(function(){
+  //   if (didScroll) {
+  //     didScroll = false;
+  //     var navi = $('.navi').offset().top;
+  //     console.log(navi);
+  //     if ($(window).pageYOffset > navi) {
+  //         $('.navi').addClass('fixed-top');
+  //     } else {
+  //         $('.navi').removeClass('fixed-top');
+  //     }
+  //   }
+  //
+  // },400);
   //
   // Check if element is scrolled into view
   // function isScrolledIntoView(elem) {
@@ -134,6 +136,22 @@ $(document).ready(function() {
   //     });
   //   }
   // }, 25);
+
+  var stickyOffset = $('.navi').offset().top;
+
+  $(window).scroll(function(){
+    var sticky = $('.navi'),
+        scroll = $(window).scrollTop();
+
+    if (scroll >= stickyOffset) sticky.addClass('fixed-top fadeInDown');
+    else sticky.removeClass('fixed-top fadeInDown');
+  });
+
+  $('.tab-pane').each(function(){
+    $(this).removeClass('fade');
+  });
+
+  $('.swiper-wrap').css('display','block');
 
   $('.link-cari').on('click',function(e){
     e.preventDefault();
@@ -245,7 +263,9 @@ $(document).ready(function() {
     loop : true
   });
 
-  AOS.init({
-    startEvent: 'load',
+  $('.gaya').each(function(){
+    $(this).attr('data-aos','fade-right');
   });
+
+  AOS.init();
 });
