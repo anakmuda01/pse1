@@ -63,39 +63,30 @@
           </div>
           <div class="navbar-wrapper">
             <nav class="navbar navbar-expand-lg navbar-light navbar-pse animated navi">
-              <a class="navbar-brand" href="/blog"><i class="fa fa-home"></i></a>
+              <a class="navbar-brand" href="/"><i class="fa fa-home"></i></a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
 
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nor nav-link" href="#">Profil</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nor nav-link" href="#">Features</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nor nav-link" href="#">Pricing</a>
-                  </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Dropdown link
+                      Profil
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <div class="dropright">
-                        <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Dropdown link
-                        </a>
-                        <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                        </div>
-                      </div>
+                      <a class="dropdown-item" href="/profil-pse1">Profil Puskesmas</a>
+                      <a class="dropdown-item" href="/visi-misi-motto">Visi, Misi dan Motto</a>
                     </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nor nav-link" href="/daftar-pelayanan">Daftar Pelayanan</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nor nav-link" href="/daftar-pegawai">Daftar Pegawai</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nor nav-link" href="/kontak">Kontak</a>
                   </li>
                 </ul>
               </div>

@@ -5,6 +5,10 @@ body{
   width: 100%;
   height: 100%;
 }
+.full-layar{
+  padding-top: 10px;
+  min-height: 100vh;
+}
 .cover-pse{
   top:0;
   margin: 0;
@@ -36,6 +40,7 @@ body{
   font-size: 1.5em;
   font-weight: bold;
   color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.51);
 }
 #head-slide{
   height: 450px;
@@ -294,6 +299,7 @@ body{
 
 .banner-kosong{
   height: 100%;
+  width: 100%;
   background-attachment: fixed;
 }
 .banner-kosong:after{
@@ -724,11 +730,68 @@ body{
   padding-left: 10px;
 }
 
-.news-box{
-  opacity: 1;
+
+.news-card{
+  border: none !important;
+  box-sizing: border-box;
+  -webkit-box-shadow: 2px 10px 20px 0px rgba(0,0,0,0.17);
+  -moz-box-shadow: 2px 10px 20px 0px rgba(0,0,0,0.17);
+  box-shadow: 2px 10px 20px 0px rgba(0,0,0,0.17);
 }
-.isi-news{
-  min-height: 9rem;
+.title-wrapper{
+  padding-top: 25px;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.51);
+}
+.read{
+  flex: 1;
+  padding: 0 1.25rem 1.25rem;
+}
+.read-more{
+  margin-right: 10px;
+  background-color: #fff;
+  color: #262626;
+  border: 1px solid #efe4e4;
+  transition: .2s;
+}
+
+.read-more:hover{
+  background-color: rgb(45, 95, 97);
+  color: #fff;
+  transition: .2s;
+}
+
+.kategori-link{
+  background-color: #27b9f7;
+  font-size: 13px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  font-weight: 600;
+  border-radius: 2px;
+  margin-right: 4px;
+  color: #ffffff;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.kategori-link:hover{
+  color:#fff;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.full-berita{
+  background-color: #262626;
+  border: 1px solid #000;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 600;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.51);
+}
+.full-berita:hover{
+  color: #fff;
+  opacity: 0.9;
+  transition: 0.2s;
 }
 
 .penulis{
@@ -750,6 +813,7 @@ body{
 /* swiper css */
 .swiper-wrap{
   display: none;
+  background-color: #262626;
 }
 .swiper-container {
  width: 100%;
@@ -774,19 +838,19 @@ body{
 .swiper-slide .details{
   box-sizing: border-box;
   font-size: 20px;
-  padding: 20px;
+  padding: 10px;
   color: red;
 }
-.swiper-slide .details h3{
+.swiper-slide .details p{
   padding: 0;
   margin: 0;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   line-height: 20px;
   color: #262626;
   font-weight: bold;
 }
-.swiper-slide .details h3 span{
+.swiper-slide .details p span{
   font-size: 16px;
   color: #f44336;
 }
@@ -828,6 +892,150 @@ body{
 }
 .link-berita{
   display: block;
+}
+.kategori-widget ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.kategori-widget ul li{
+  display: block;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eceef2;
+}
+
+.kategori-widget ul li + li {
+    margin-top: 10px;
+}
+
+.kategori-widget ul li > a {
+    display: block;
+    -webkit-transition: 0.2s color;
+    transition: 0.2s;
+    font-weight: 600;
+    color: #212631;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.kategori-widget ul li > a:hover {
+    color: #cf8609;
+}
+
+.kategori-widget ul li > a > span {
+    float: right;
+    color: #fff;
+    background-color: #212631;
+    padding: 0px 5px;
+    font-weight: 600;
+    border-radius: 2px;
+    transition: .2s;
+}
+.kategori-widget ul li > a:hover > span{
+    background-color: #cf8609;
+}
+
+.card-pro{
+  background: #f5f4f3;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.51);
+}
+.card-pro .card-header{
+  background-color: rgba(4, 145, 169, 0.43);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.3em;
+  padding: 1.2em 0 0.5em !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.92);
+}
+.card-pro .card-body{
+  padding: 0.8em 2em;
+}
+
+.card-img-top{
+  height: 14rem;
+}
+.card-b-peg{
+  padding-top: 5px !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  margin: 0 !important;
+  background-color: #fff;
+}
+.peg-ket, .peg-ttl, .peg-alamat{
+  display: block;
+  color: #747474;
+  font-weight: 600;
+  border-bottom: 1px solid #dee0e0;
+}
+.peg-ket:last-child, .peg-ttl:last-child, .peg-alamat:last-child{
+  border-bottom: none;
+}
+.peg-ket{
+  height: 2.5em;
+  line-height: 2.5em;
+}
+.peg-ttl{
+  height: 2.5em;
+  line-height: 2.3em;
+}
+.peg-ket p{
+  display: block;
+}
+.peg-ttl p span{
+  font-size: 0.8em;
+}
+.peg-alamat{
+  height: 90px;
+}
+.peg-alamat span{
+  display: block;
+  text-align: center;
+}
+
+.peg-ket i, .peg-ttl i{
+  display: inline-block;
+  margin-right: 0.7em;
+}
+.no-wrap td{
+  white-space: nowrap;
+}
+.yes-wrap{
+  white-space: normal !important;
+}
+.peg-card{
+  width: 17.5em !important;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.51);
+}
+.peg-img{
+  width: 250px;
+  height: 250px;
+}
+.span-nama{
+  display: block;
+  text-align: center;
+  font-size: 1.3em;
+  color: green;
+  width: 250px;
+  border: 1px solid #262626;
+}
+.table-pro{
+  border: 2px solid green;
+}
+.peg-box{
+  padding: 0;
+}
+
+.kontak1, .kontak2{
+  color: #262626;
+  font-style: bold;
+  font-size: 1.2em;
+}
+.kontak1 span{
+  margin-right: 1em;
+}
+.kontak-card{
+  background-color: #fff !important;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.51);
 }
 
 /* media query */
@@ -879,6 +1087,9 @@ body{
   .posts-wrap, .single-wrap{
     min-height: 100vh;
   }
+  .random-post{
+    margin-top: 50px;
+  }
 }
 
 /* end footer css */
@@ -913,12 +1124,15 @@ body{
       right: 15%;
       bottom: 0;
       left: 15%;
-      top: 0;
+      top: 15px;
       z-index: 10;
       padding-top: 20px;
       padding-bottom: 20px;
       color: #fff;
       text-align: center;
+  }
+  .caption-kosong p,h1,h2,h3,h4,h5{
+    font-size: 0.7em !important;
   }
   .slide-judul{
     font-size: 0.9em;
@@ -977,7 +1191,7 @@ body{
   }
 
 }
-@media (max-width: 320px){
+@media (max-width: 568px){
   .telpon{
     font-size: 1em;
   }
@@ -986,5 +1200,11 @@ body{
   }
   .scroll-animations .animated{
     opacity: 1;
+  }
+  .kontak1, .kontak2{
+    font-size: 1.2em;
+  }
+  .kontak1 span{
+    margin-right: 0.8em;
   }
 }

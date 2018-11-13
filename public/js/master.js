@@ -143,7 +143,7 @@ $(document).ready(function() {
     var sticky = $('.navi'),
         scroll = $(window).scrollTop();
 
-    if (scroll >= stickyOffset) sticky.addClass('fixed-top fadeInDown');
+    if (scroll >= stickyOffset+20) sticky.addClass('fixed-top fadeInDown');
     else sticky.removeClass('fixed-top fadeInDown');
   });
 
@@ -189,48 +189,49 @@ $(document).ready(function() {
       });
   });
 
-  var tabChange = function () {
-      var tabs = $('#myTab > li');
-      var active = tabs.filter('.active');
-      var next = active.next('li').length ? active.next('li').find('a') : tabs.eq(0).find('a');
-      if(active.next('li').length){
-        active.removeClass('active');
-        active.next('li').addClass('active');
-      }else{
-        tabs.eq(0).addClass('active');
-      }
-      // Use the Bootsrap tab show method
-      $('.isi-kategori-item').each(function(){
-        $(this).addClass('fadeInRight');
-      })
-      next.tab('show');
-  };
-  // Tab Cycle function
-  var tabCycle = setInterval(tabChange, 30000);
-
-  // Tab click event handler
-  var dipicik = false;
-  $('.tab-kat').on('click', function (e) {
-    e.preventDefault();
-    dipicik = true;
-    $(this).tab('show');
-    $('.isi-kategori-item').each(function(){
-      $(this).addClass('fadeInRight');
-    })
-  });
-
-  setInterval(function() {
-    if (dipicik) {
-        dipicik = false;
-        // Stop the cycle
-        clearInterval(tabCycle);
-        // Show the clicked tabs associated tab-pane
-        // Start the cycle again in a predefined amount of time
-        setTimeout(function () {
-            tabCycle = setInterval(tabChange, 30000);
-        }, 15000);
-    }
-  }, 20000);
+  
+  // var tabChange = function () {
+  //     var tabs = $('#myTab > li');
+  //     var active = tabs.filter('.active');
+  //     var next = active.next('li').length ? active.next('li').find('a') : tabs.eq(0).find('a');
+  //     if(active.next('li').length){
+  //       active.removeClass('active');
+  //       active.next('li').addClass('active');
+  //     }else{
+  //       tabs.eq(0).addClass('active');
+  //     }
+  //     // Use the Bootsrap tab show method
+  //     $('.isi-kategori-item').each(function(){
+  //       $(this).addClass('fadeInRight');
+  //     })
+  //     next.tab('show');
+  // };
+  // // Tab Cycle function
+  // var tabCycle = setInterval(tabChange, 30000);
+  //
+  // // Tab click event handler
+  // var dipicik = false;
+  // $('.tab-kat').on('click', function (e) {
+  //   e.preventDefault();
+  //   dipicik = true;
+  //   $(this).tab('show');
+  //   $('.isi-kategori-item').each(function(){
+  //     $(this).addClass('fadeInRight');
+  //   })
+  // });
+  //
+  // setInterval(function() {
+  //   if (dipicik) {
+  //       dipicik = false;
+  //       // Stop the cycle
+  //       clearInterval(tabCycle);
+  //       // Show the clicked tabs associated tab-pane
+  //       // Start the cycle again in a predefined amount of time
+  //       setTimeout(function () {
+  //           tabCycle = setInterval(tabChange, 30000);
+  //       }, 15000);
+  //   }
+  // }, 20000);
 
   // $('.tab-kat').on('click', function (e) {
   //     e.preventDefault();

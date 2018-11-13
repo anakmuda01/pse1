@@ -2,6 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Web;
+use App\Models\Post;
+use App\Models\Waktu;
+use App\Models\Kontak;
+use App\Models\Banner;
+use App\Models\Pegawai;
+
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -13,76 +20,36 @@ class BlogController extends Controller
      */
     public function index()
     {
-        return view('blog.index');
+        $posts = Post::all();
+        $waks = Waktu::get()->first();
+        $pegs = Pegawai::all();
+        $kon = Kontak::get()->first();
+        $web = Web::get()->first();
+        $bans = Banner::all();
+        return view('blog.index',compact('posts','waks','pegs','kon','web','bans'));
     }
     public function indexPost()
     {
         return view('blog.index-post');
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function profilWeb()
     {
-        //
+      $web = Web::get()->first();
+      return view('blog.profilWeb',compact('web'));
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function pelayanan()
     {
-        //
+      $web = Web::get()->first();
+      return view('blog.daftarPelayanan',compact('web'));
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public function vmm()
     {
-        return view('blog.single-post');
+      $web = Web::get()->first();
+      return view('blog.vmm',compact('web'));
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function daftarPegawai()
     {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+      $pegs = Pegawai::all();
+      return view('blog.daftarPegawai',compact('pegs'));
     }
 }

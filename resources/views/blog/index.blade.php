@@ -5,23 +5,24 @@
   <div id="head-slide" class="carousel slide carousel-fade" data-ride="carousel">
     <ol class="carousel-indicators slide-bulat">
       <li data-target="#head-slide" data-slide-to="0" class="hov active"></li>
-      <li class="hov" data-target="#head-slide" data-slide-to="1"></li>
-      <li class="hov" data-target="#head-slide" data-slide-to="2"></li>
+      @foreach ($bans as $i => $b)
+        <li class="hov" data-target="#head-slide" data-slide-to="{{$i+1}}"></li>
+      @endforeach
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item slide-image active">
         <div class="banner-kosong" style="background-image: url('/img/muka.jpg');"></div>
         <div class="carousel-caption d-md-block caption-kosong animated zoomIn">
-          <h5 class="slide-judul">Sekilas Profile PSE 1</h5>
-          <p class="slide-ket lead">Puskesmas Simpang Empat adalah puskesmas rawat jalan yang berjarak 30km dari ibukota kabupaten Banjar, Martapura, dan berjarak 69km dari ibukota propinsi, Banjarmasin. Wilayah kerja Puskesmas Simpang Empat meliputi 2 Kecamatan yang terdiri dari 16 desa, 10 desa masuk di wilayah kecamatan Simpang Empat (S E) dan 6 desa masuk di wilayah Kecamatan Cinta Puri Darusalam (C D).</p>
+          {{-- <h5 class="slide-judul">Sekilas Profile PSE 1</h5>
+          <p class="slide-ket lead">Puskesmas Simpang Empat adalah puskesmas rawat jalan yang berjarak 30km dari ibukota kabupaten Banjar, Martapura, dan berjarak 69km dari ibukota propinsi, Banjarmasin. Wilayah kerja Puskesmas Simpang Empat meliputi 2 Kecamatan yang terdiri dari 16 desa, 10 desa masuk di wilayah kecamatan Simpang Empat (S E) dan 6 desa masuk di wilayah Kecamatan Cinta Puri Darusalam (C D).</p> --}}
+          {!! $web->banner !!}
         </div>
       </div>
-      <div class="carousel-item slide-image">
-        <a href="/blog"><img class="d-block w-100 banner-img" src="{{asset('img/banner_imun.jpg')}}" alt="slide 4"></a>
-      </div>
-      <div class="carousel-item slide-image">
-        <a href="/blog"><img class="d-block w-100 banner-img" src="{{asset('img/banner_gigi.jpg')}}" alt="slide 5"></a>
-      </div>
+      @foreach ($bans as $i => $b)
+        <div class="carousel-item slide-image">
+          <a href="/banner/{{$b->slug_nama}}"><img class="d-block w-100 banner-img" src="{{$b->banner}}" alt="slide {{$i+1}}"></a>
+        </div>
+      @endforeach
     </div>
 
     <a class="carousel-control-prev" href="#head-slide" role="button" data-slide="prev">
@@ -36,7 +37,7 @@
   {{-- slide off --}}
   <div class="container-fluid op-box">
     <div class="row">
-      <div class="col-md-4 gaya scroll-animations">
+      <div class="col-md-6 col-lg-6 col-xl-4 gaya scroll-animations">
         <div class="animated">
           <div class="box-pro card">
             <div class="card-header box-header text-center bg-transparent">
@@ -53,15 +54,15 @@
               <div class="jadwal-pelayanan">
                 <div class="waktu-pelayanan">
                   <div class="hari-buka">Senin-Kamis</div>
-                  <div class="waktu-buka">08.00 - 12.00 Wita</div>
+                  <div class="waktu-buka">{{$waks->waktu_1}} Wita</div>
                 </div>
                 <div class="waktu-pelayanan">
                   <div class="hari-buka">Jum'at</div>
-                  <div class="waktu-buka">08.00 - 11.00 Wita</div>
+                  <div class="waktu-buka">{{$waks->waktu_2}} Wita</div>
                 </div>
                 <div class="waktu-pelayanan">
                   <div class="hari-buka">Sabtu</div>
-                  <div class="waktu-buka">08.00 - 12.00 Wita</div>
+                  <div class="waktu-buka">{{$waks->waktu_3}} Wita</div>
                 </div>
               </div>
             </div>
@@ -69,7 +70,7 @@
         </div>
       </div>
 
-      <div class="col-md-4 gaya scroll-animations">
+      <div class="col-md-6 col-lg-6 col-xl-4 gaya scroll-animations">
         <div class="animated">
           <div class="box-pro card">
             <div class="card-header box-header text-center bg-transparent">
@@ -85,16 +86,16 @@
             <div class="card-body">
               <div class="kontak-body text-center">
                 <span class="layanan">Kami memberikan pelayanan terbaik untuk anda.</span>
-                <button class="btn btn-pse">
+                <a href="/daftar-pelayanan" class="btn btn-pse">
                   List Pelayanan ->
-                </button>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="col-md-4 gaya scroll-animations">
+      <div class="col-md-12 col-lg-12 col-xl-4 gaya scroll-animations">
         <div class="animated">
           <div class="box-pro card">
             <div class="card-header box-header text-center bg-transparent">
@@ -109,8 +110,8 @@
             </div>
             <div class="card-body">
               <div class="kontak-body">
-                <span class="telpon">084299999999</span>
-                <span class="email"><i class="fa fa-envelope-o">&nbsp;simpangempat6303@gmail.com</i></span>
+                <span class="telpon">{{$kon->telpon}}</span>
+                <span class="email"><i class="fa fa-envelope-o">&nbsp;{{$kon->email}}</i></span>
               </div>
             </div>
           </div>
@@ -130,275 +131,38 @@
     </div>
   </div>
 
-  <div class="container-fluid">
-
-    <div class="row animated post-wrap gaya">
-
-      <div class="col-md-2 kategori news-box">
-        <ul class="nav my-nav" id="myTab" role="tablist">
-          <li class="active">
-            <a class="tab-kat nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><i class="fa fa-newspaper-o"></i>&nbsp;Semua</a>
-          </li>
-          <li class="">
-            <a class="tab-kat nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><i class="fa fa-rocket"></i>&nbsp;Kegiatan PKM</a>
-          </li>
-          <li class="">
-            <a class="tab-kat nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"><i class="fa fa-medkit"></i>&nbsp;Kesehatan</a>
-          </li>
-        </ul>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 title-wrapper gaya">
+        <h1 class="text-center">Berita Terbaru</h1>
       </div>
-
-      <div class="col-md-10 isi-kategori">
-
-        <div class="tab-content" id="myTabContent">
-
-          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
-            <div class="row">
-              <div class="col-md-4 isi-kategori-item news-box gaya animated">
-                <div class="card" style="min-width: 20rem; min-height:25.5rem;">
-                  <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
-                  <div class="card-body isi-news">
-                    <h5 class="card-title">SEMUA</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <span class="tgl">13 November 2018</span>
-                      </div>
-                      <div class="col-md-12">
-                        <span class="kat">tag : Kesehatan, Penyuluhan</span>
-                      </div>
-                      <div class="col-md-12">
-                        <span class="penulis">oleh Fathurrahman S</span>
-                      </div>
-                    </div>
-                    <a href="#" class="btn btn-pse">Baca selengkapnya..</a>
-                  </div>
+      @if ($posts->count() > 0)
+        @foreach ($posts as $p)
+          <div class="col-md-6 col-lg-6 col-xl-4 my-5 gaya">
+            <div class="card news-card mx-auto" style="width: 20rem; height: 26rem;">
+              <img class="card-img-top" src="{{$p->gambar}}" alt="{{str_limit($p->judul,20)}}">
+              <div class="card-body">
+                <div class="card-title">
+                  <a href="#" class="kategori-link">
+                      {{$p->tags[0]->nama_tag}}
+                  </a>
+                  <span><i class="fa fa-calendar"></i> {{$p->tanggal}}</span>
                 </div>
+                <h5 class="card-text">{{str_limit($p->judul,75)}}</h5>
               </div>
-              <div class="col-md-4 isi-kategori-item gaya news-box animated">
-                <div class="card" style="min-width: 20rem; min-height:25.5rem;">
-                  <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
-                  <div class="card-body isi-news">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <span class="tgl">13 November 2018</span>
-                      </div>
-                      <div class="col-md-12">
-                        <span class="kat">tag : Kesehatan, Penyuluhan</span>
-                      </div>
-                      <div class="col-md-12">
-                        <span class="penulis">oleh Fathurrahman S</span>
-                      </div>
-                    </div>
-                    <a href="#" class="btn btn-pse">Baca selengkapnya..</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 isi-kategori-item gaya news-box animated">
-                <div class="card" style="min-width: 20rem; min-height:25.5rem;">
-                  <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
-                  <div class="card-body isi-news">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <span class="tgl">13 November 2018</span>
-                      </div>
-                      <div class="col-md-12">
-                        <span class="kat">tag : Kesehatan, Penyuluhan</span>
-                      </div>
-                      <div class="col-md-12">
-                        <span class="penulis">oleh Fathurrahman S</span>
-                      </div>
-                    </div>
-                    <a href="#" class="btn btn-pse">Baca selengkapnya..</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12 isi-kategori-item gaya news-box animated">
-                <div class="card">
-                  <div class="card-body">
-                    <a href="#" class="btn btn-pse btn-block">Berita lainya..</a>
-                  </div>
-                </div>
+              <div class="read">
+                <a href="/posts/{{$p->slug_judul}}" class="btn read-more">Baca Selengkapnya</a>
+                <span><i class="fa fa-user-circle"></i>&nbsp; {{$p->user->name}}</span>
               </div>
             </div>
           </div>
-          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-            <div class="row">
-              <div class="col-md-4 isi-kategori-item gaya news-box animated">
-                <div class="card" style="min-width: 20rem; min-height:25.5rem;">
-                  <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
-                  <div class="card-body isi-news">
-                    <h5 class="card-title">KEGIATAN PKM</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <span class="tgl">13 November 2018</span>
-                      </div>
-                      <div class="col-md-12">
-                        <span class="kat">tag : Kesehatan, Penyuluhan</span>
-                      </div>
-                      <div class="col-md-12">
-                        <span class="penulis">oleh Fathurrahman S</span>
-                      </div>
-                    </div>
-                    <a href="#" class="btn btn-pse">Baca selengkapnya..</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 isi-kategori-item gaya news-box animated">
-                <div class="card" style="min-width: 20rem; min-height:25.5rem;">
-                  <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
-                  <div class="card-body isi-news">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <span class="tgl">13 November 2018</span>
-                      </div>
-                      <div class="col-md-12">
-                        <span class="kat">tag : Kesehatan, Penyuluhan</span>
-                      </div>
-                      <div class="col-md-12">
-                        <span class="penulis">oleh Fathurrahman S</span>
-                      </div>
-                    </div>
-                    <a href="#" class="btn btn-pse">Baca selengkapnya..</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 isi-kategori-item gaya news-box animated">
-                <div class="card" style="min-width: 20rem; min-height:25.5rem;">
-                  <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
-                  <div class="card-body isi-news">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <span class="tgl">13 November 2018</span>
-                      </div>
-                      <div class="col-md-12">
-                        <span class="kat">tag : Kesehatan, Penyuluhan</span>
-                      </div>
-                      <div class="col-md-12">
-                        <span class="penulis">oleh Fathurrahman S</span>
-                      </div>
-                    </div>
-                    <a href="#" class="btn btn-pse">Baca selengkapnya..</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12 isi-kategori-item gaya news-box animated">
-                <div class="card">
-                  <div class="card-body">
-                    <a href="#" class="btn btn-pse btn-block">Berita lainya..</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-            <div class="row">
-              <div class="col-md-4 isi-kategori-item gaya news-box animated">
-                <div class="card" style="min-width: 20rem; min-height:25.5rem;">
-                  <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
-                  <div class="card-body isi-news">
-                    <h5 class="card-title">Penyuluhan</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <span class="tgl">13 November 2018</span>
-                      </div>
-                      <div class="col-md-12">
-                        <span class="kat">tag : Kesehatan, Penyuluhan</span>
-                      </div>
-                      <div class="col-md-12">
-                        <span class="penulis">oleh Fathurrahman S</span>
-                      </div>
-                    </div>
-                    <a href="#" class="btn btn-pse">Baca selengkapnya..</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 isi-kategori-item gaya news-box animated">
-                <div class="card" style="min-width: 20rem; min-height:25.5rem;">
-                  <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
-                  <div class="card-body isi-news">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <span class="tgl">13 November 2018</span>
-                      </div>
-                      <div class="col-md-12">
-                        <span class="kat">tag : Kesehatan, Penyuluhan</span>
-                      </div>
-                      <div class="col-md-12">
-                        <span class="penulis">oleh Fathurrahman S</span>
-                      </div>
-                    </div>
-                    <a href="#" class="btn btn-pse">Baca selengkapnya..</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 isi-kategori-item gaya news-box animated">
-                <div class="card" style="min-width: 20rem; min-height:25.5rem;">
-                  <img class="card-img-top" src="{{asset('img/gambar1.jpg')}}" alt="Card image cap">
-                  <div class="card-body isi-news">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <span class="tgl">13 November 2018</span>
-                      </div>
-                      <div class="col-md-12">
-                        <span class="kat">tag : Kesehatan, Penyuluhan</span>
-                      </div>
-                      <div class="col-md-12">
-                        <span class="penulis">oleh Fathurrahman S</span>
-                      </div>
-                    </div>
-                    <a href="#" class="btn btn-pse">Baca selengkapnya..</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12 isi-kategori-item gaya news-box animated">
-                <div class="card">
-                  <div class="card-body">
-                    <a href="#" class="btn btn-pse btn-block">Berita lainya..</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        @endforeach
+      @endif
 
+      <div class="col-md-12 mx-auto my-3 gaya text-center">
+        <a href="/index-post" class="btn full-berita">Berita Lainnya</a>
       </div>
-
     </div>
-
   </div>
 
   <div class="container-fluid quote-wrapper gaya news-box">
@@ -415,46 +179,16 @@
   <!-- Swiper -->
   <div class="swiper-container gaya swiper-wrap">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="imgBx">
-          <img src="{{asset('img/pegawai/foto-sholihin.jpg')}}" alt="foto-sholihin">
+      @foreach ($pegs as $p)
+        <div class="swiper-slide">
+          <div class="imgBx">
+            <img src="{{$p->foto}}" alt="{{$p->nama}}">
+          </div>
+          <div class="details">
+            <p>{{str_limit($p->nama,24)}}<br><span>{{$p->profesi}}</span></p>
+          </div>
         </div>
-        <div class="details">
-          <h3>Sholihin<br><span>Programmer</span></h3>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="imgBx">
-          <img src="{{asset('img/pegawai/foto-fathurrahman.jpg')}}" alt="foto-fathurrahman">
-        </div>
-        <div class="details">
-          <h3>Fathurrahman<br><span>Programmer</span></h3>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="imgBx">
-          <img src="{{asset('img/pegawai/foto-1.jpg')}}" alt="foto-sholihin">
-        </div>
-        <div class="details">
-          <h3>Sholihin<br><span>Programmer</span></h3>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="imgBx">
-          <img src="{{asset('img/pegawai/foto-2.jpg')}}" alt="foto-sholihin">
-        </div>
-        <div class="details">
-          <h3>Sholihin<br><span>Programmer</span></h3>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="imgBx">
-          <img src="{{asset('img/pegawai/foto-3.jpg')}}" alt="foto-sholihin">
-        </div>
-        <div class="details">
-          <h3>Sholihin<br><span>Programmer</span></h3>
-        </div>
-      </div>
+      @endforeach
     </div>
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
