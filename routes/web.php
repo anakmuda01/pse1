@@ -31,10 +31,17 @@ Route::get('daftar-pegawai','BlogController@daftarPegawai');
 Route::get('kontak','MapController@kontak');
 Route::get('index-post','BlogController@indexPost');
 Route::get('banner/{slug}','BannerController@theBanner');
+Route::get('kategori/{tag}','BlogController@filterPost');
+Route::get('berita/{slug}','BlogController@showPost');
+Route::post('/save-komen/{id}','KomentarController@storeKomen');
+Route::get('/kategori/{tag}','BlogController@filterByTag');
+Route::get('kotak-saran','BlogController@getKersan');
+Route::post('/save-kersan','KomentarController@storeKersan');
+Route::post('/cari','BlogController@cari');
 
 Route::group(['middleware' => 'verified'],function(){
   Route::get('dashboard','AdminController@index');
-  Route::get('kategori/{tag}','AdminController@filter');
+  Route::get('kat/{tag}','AdminController@filter');
 
   Route::get('/profil-user', 'HomeController@index')->name('profil-user');
   Route::get('/ubah-password', 'HomeController@ubahPass')->name('ubah-password');

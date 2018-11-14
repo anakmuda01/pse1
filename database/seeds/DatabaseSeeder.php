@@ -11,6 +11,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+      $posts = App\Models\Post::all();
+      $tags = App\Models\Tag::pluck('id')->all();
+
+      foreach ($posts as $post) {
+        $post->tags()->attach(array_random($tags));
+      }
     }
 }

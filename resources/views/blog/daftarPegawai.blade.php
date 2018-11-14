@@ -16,10 +16,10 @@
                 <div class="card peg-card mx-auto">
                   <img class="peg-img" src="{{$p->foto}}" alt="{{$p->nama}}">
                   <div class="card-body card-b-peg">
-                    <span class="peg-ket"><p><i class="fa fa-user-circle"></i>{{$p->nama}}</p></span>
+                    <span class="peg-ket"><p><i class="fa fa-user-circle"></i>{{str_limit($p->nama,26)}}</p></span>
                     <span class="peg-ket"><p><i class="fa fa-id-card"></i>{{$p->nip}}</p></span>
                     <span class="peg-ttl"><p><i class="fa fa-calendar"></i><span>{{str_limit($p->tempat_lahir,16)}}, {{$p->tanggal_lahir}}</span></p></span>
-                    <span class="peg-ket"><p><i class="fa fa-briefcase"></i>{{$p->profesi}}</p></span>
+                    <span class="peg-ket"><p><i class="fa fa-briefcase"></i>{{str_limit($p->profesi,24)}}</p></span>
                     <span class="peg-ket"><p><i class="fa fa-certificate"></i>{{$p->status}}</p></span>
                     <span class="peg-ket"><p><i class="fa fa-phone"></i>{{$p->telpon}}</p></span>
                     <div class="peg-alamat text-center">

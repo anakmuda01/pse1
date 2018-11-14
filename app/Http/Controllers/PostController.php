@@ -73,16 +73,18 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
-    {
-      $post = Post::where('slug_judul',$slug)->first();
-      if($post){
-
-      }else{
-        abort(404);
-      }
-      return view('posts.single-post',compact('post'));
-    }
+    // public function show($slug)
+    // {
+    //   $tags = Tag::with('posts')->get();
+    //   $post = Post::with('tags')->where('slug_judul',$slug)->first();
+    //
+    //   if($post){
+    //
+    //   }else{
+    //     abort(404);
+    //   }
+    //   return view('posts.single-post',compact('post','tags'));
+    // }
 
     /**
      * Show the form for editing the specified resource.

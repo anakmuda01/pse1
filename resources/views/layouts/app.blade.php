@@ -94,7 +94,10 @@
                 <a href="#" class="link-cari rounded"><i class="fa fa-search"></i></a>
               </div>
               <div class="banner-cari animated">
-                <input type="text" placeholder="Cari di web ini .....">
+                <form action="/cari" method="post">
+                  {{ csrf_field() }}
+                  <input type="text" name="cari" class="input-cari" placeholder="Cari di web ini .....">
+                </form>
               </div>
             </nav>
           </div>
@@ -109,7 +112,7 @@
           <footer id="footer">
             <div class="container">
               <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-5 foot-widget">
+                <div class="col-xs-12 col-sm-6 col-md-8 col-lg-9 foot-widget">
                   <a id="foot-link-logo" href="#">
                     <div class="foot-logo col-xs-12 no-pad">
                       <img src="{{asset('img/logo.png')}}" alt="logo-puskes" id="logo-puskes">
@@ -131,30 +134,17 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 recent-post-foot foot-widget">
-                  <div class="foot-widget-title">Recent Posts</div>
-                  <ul>
-                    <li><a href="#">Post 1</a></li>
-                    <li><a href="#">Post 2</a></li>
-                    <li><a href="#">Post 3</a></li>
-                  </ul>
-                </div>
-                {{-- <div class="col-xs-12 col-sm-6 col-md-4 recent-news-foot foot-widget">
-                  <div class="foot-widget-title">Recent News</div>
-                  <ul>
-                    <li><a href="#">News 1</a></li>
-                    <li><a href="#">News 2</a></li>
-                    <li><a href="#">News 3</a></li>
-                  </ul>
-                </div> --}}
-                <div class="col-xs-12 col-sm-6 col-md-3 foot-widget">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 foot-widget">
                   <div class="foot-widget-title">Media Sosial</div>
-                  <div class="sosial-wrap">
+                  <div class="sosial-wrap mb-4">
                     <ul>
                       <li><a href="#"><i class="fa fa-facebook fa-2x foot-sosial-icon" ></i></a></li>
                       <li><a href="#"><i class="fa fa-youtube fa-2x foot-sosial-icon"></i></a></li>
-                      <li><a href="#"><i class="fa fa-instagram fa-2x foot-sosial-icon"></i></a></li>
+                      <li><a href="https://www.instagram.com/puskesmas_simpangempat1/" target="_blank"><i class="fa fa-instagram fa-2x foot-sosial-icon"></i></a></li>
                     </ul>
+                  </div>
+                  <div class="kotak-saran">
+                    <a href="/kotak-saran" class="link-saran"><i class="fa fa-archive mx-1" aria-hidden="true"></i>KOTAK KRITIK & SARAN</a>
                   </div>
                 </div>
               </div>
@@ -165,13 +155,12 @@
               <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 foot-widget-bottom">
                   <div class="row">
-                    <p class="col-xs-12 col-md-5 no-pad">PSE 2018 Design by FS</p>
+                    <p class="col-xs-12 col-md-5 no-pad mx-2">PKM Simpang Empat 1 &copy;2018 Design by <a href="https://www.facebook.com/fathurrahman.sholihin">F.S</a></p>
                     <ul class="foot-menu col-xs-12 col-md-7 no-pad">
-                      <li><a href="#">about</a></li>
-                      <li><a href="#">about</a></li>
-                      <li><a href="#">about</a></li>
-                      <li><a href="#">about</a></li>
-                      <li><a id="gg" href="#">ggg</a></li>
+                      <li><a href="/">Home</a></li>
+                      <li><a href="/index-post">Berita</a></li>
+                      <li><a href="/profil-pse1">Profil</a></li>
+                      <li><a href="/kontak">Kontak</a></li>
                     </ul>
                   </div>
                 </div>

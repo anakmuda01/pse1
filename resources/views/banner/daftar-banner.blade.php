@@ -44,7 +44,7 @@
                     @foreach ($bans as $i => $b)
                       <tr class="no-wrap">
                         <td class="mid">{{$i+1}}</td>
-                        <td class="mid">{{$b->nama}}</td>
+                        <td class="mid"><a href="/banner/{{$b->slug_nama}}" target="_blank"><b>{{$b->nama}}</b></a></td>
                         <td class="mid"><img src="{{$b->banner}}" alt="{{$b->nama}}" style="height:200px; width:auto;"></td>
                         <td><a href="/edit-banner/{{$b->id}}" class="btn btn-warning"><i class="fas fa-pencil-alt"></i></a></td>
                         <td>

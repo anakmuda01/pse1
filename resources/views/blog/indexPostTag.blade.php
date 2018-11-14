@@ -5,30 +5,24 @@
   <div class="row justify-content-between">
     <div class="col-md-12 col-lg-12 col-xl-8">
       <div class="row">
-        @if ($posts->count() > 0)
-          @foreach ($posts as $p)
-            <div class="col-md-6 my-3 gaya">
-              <div class="card news-card mx-auto" style="width: 21rem; height: 26rem;">
-                <img class="card-img-top" style="height: 14rem;" src="{{$p->gambar}}" alt="{{$p->judul}}">
-                <div class="card-body">
-                  <div class="card-title">
-                    <a href="/kategori/{{$p->tags[0]->slug_tag}}" class="kategori-link">{{$p->tags[0]->nama_tag}}</a>
-                    <span><i class="fa fa-calendar"></i> {{$p->tanggal}}</span>
-                  </div>
-                  <h5 class="card-text">{{$p->judul}}</h5>
+        @foreach ($posts as $p)
+          <div class="col-md-6 my-3 gaya">
+            <div class="card news-card mx-auto" style="width: 21rem; height: 26rem;">
+              <img class="card-img-top" style="height: 14rem;" src="{{$p->gambar}}" alt="{{$p->judul}}">
+              <div class="card-body">
+                <div class="card-title">
+                  <a href="/kategori/{{$p->tags[0]->slug_tag}}" class="kategori-link">{{$p->tags[0]->nama_tag}}</a>
+                  <span><i class="fa fa-calendar"></i> {{$p->tanggal}}</span>
                 </div>
-                <div class="read">
-                  <a href="/berita/{{$p->slug_judul}}" class="btn read-more mx-1">Baca Selengkapnya</a>
-                  <span><i class="fa fa-user-circle"></i> By {{str_limit($p->user->name,15)}}</span>
-                </div>
+                <h5 class="card-text">Chrome Extension Protects Against JavaScript-Based CPU Side-Channel Attacks</h5>
+              </div>
+              <div class="read">
+                <a href="/berita/{{$p->slug_judul}}" class="btn read-more mx-1">Baca Selengkapnya</a>
+                <span><i class="fa fa-user-circle"></i> By {{str_limit($p->user->name,15)}}</span>
               </div>
             </div>
-          @endforeach
-        @else
-          <div class="col-md-6 my-3 gaya">
-            <h1>Yang pian cari kadada~</h1>
           </div>
-        @endif
+        @endforeach
         <div class="col-md-12 col-lg-12 col-xl-8 mx-auto my-3 text-center">
           {{$posts->links()}}
         </div>
@@ -67,7 +61,7 @@
                   <a href="/berita/{{$ac->slug_judul}}" class="link-post-pro">
                     <img class="card-img-top" style="height: 9rem;" src="{{$ac->gambar}}" alt="{{$ac->judul}}">
                     <div class="card-body">
-                      <p class="card-text text-center">{{str_limit($ac->judul,45)}}</p>
+                      <p class="card-text text-center">{{str_limit($ac->judul,60)}}</p>
                     </div>
                   </a>
                 </div>

@@ -36,7 +36,7 @@
                     </div>
                     <div class="mr-5">{{$t->posts->count()}} Post!</div>
                   </div>
-                  <a class="card-footer text-white clearfix small z-1" href="/kategori/{{$t->slug_tag}}">
+                  <a class="card-footer text-white clearfix small z-1" href="/kat/{{$t->slug_tag}}">
                     <span class="float-left">{{$t->nama_tag}}</span>
                     <span class="float-right">
                       <i class="fas fa-angle-right"></i>

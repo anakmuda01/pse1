@@ -151,7 +151,7 @@
                 <h5 class="card-text">{{str_limit($p->judul,75)}}</h5>
               </div>
               <div class="read">
-                <a href="/posts/{{$p->slug_judul}}" class="btn read-more">Baca Selengkapnya</a>
+                <a href="/berita/{{$p->slug_judul}}" class="btn read-more">Baca Selengkapnya</a>
                 <span><i class="fa fa-user-circle"></i>&nbsp; {{$p->user->name}}</span>
               </div>
             </div>
