@@ -126,7 +126,6 @@
                     <a class="dropdown-item" href="/edit-layanan">Daftar Pelayanan</a>
                     <a class="dropdown-item" href="/pegawai">Daftar Pegawai</a>
                     <a class="dropdown-item" href="/get-kontak">Kontak</a>
-                    <a class="dropdown-item" href="/download">Download</a>
                   </div>
                 </li>
                 <li class="nav-item">

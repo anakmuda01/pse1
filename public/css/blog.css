@@ -1191,6 +1191,9 @@ body{
   .isi-quote{
     padding: 1.5em 2em 0 2em;
   }
+  .atas-post{
+    font-size: 0.8em !important;
+  }
 
 }
 @media (max-width: 568px){

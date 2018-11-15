@@ -5,8 +5,9 @@
   <div class="row justify-content-between">
     <div class="col-md-12 col-lg-12 col-xl-8">
       <div class="row">
+      @if ($posts->count() > 0)
         @foreach ($posts as $p)
-          <div class="col-md-6 my-3 gaya">
+          <div class="col-md-6 col-lg-6 col-xl-6 my-5 gaya">
             <div class="card news-card mx-auto" style="width: 21rem; height: 26rem;">
               <img class="card-img-top" style="height: 14rem;" src="{{$p->gambar}}" alt="{{$p->judul}}">
               <div class="card-body">
@@ -14,23 +15,28 @@
                   <a href="/kategori/{{$p->tags[0]->slug_tag}}" class="kategori-link">{{$p->tags[0]->nama_tag}}</a>
                   <span><i class="fa fa-calendar"></i> {{$p->tanggal}}</span>
                 </div>
-                <h5 class="card-text">Chrome Extension Protects Against JavaScript-Based CPU Side-Channel Attacks</h5>
+                <h5 class="card-text">{{$p->judul}}</h5>
               </div>
               <div class="read">
-                <a href="/berita/{{$p->slug_judul}}" class="btn read-more mx-1">Baca Selengkapnya</a>
-                <span><i class="fa fa-user-circle"></i> By {{str_limit($p->user->name,15)}}</span>
+                <a href="/berita/{{$p->slug_judul}}" class="btn read-more mr-1">Baca Selengkapnya</a>
+                <span><i class="fa fa-user-circle mr-1"></i>{{str_limit($p->user->name,12)}}</span>
               </div>
             </div>
           </div>
         @endforeach
+      @else
+        <div class="col-md-6 my-3 gaya">
+          <h1>Yang pian cari kadada~</h1>
+        </div>
+      @endif
         <div class="col-md-12 col-lg-12 col-xl-8 mx-auto my-3 text-center">
           {{$posts->links()}}
         </div>
       </div>
     </div>
-    <div class="col-md-12 col-lg-12 col-xl-4">
+    <div class="col-md-12 col-lg-12 col-xl-4 gaya">
       <div class="row justify-content-center">
-        <div class="col-md-10 col-lg-10 title-wrapper gaya">
+        <div class="col-md-10 col-lg-10 title-wrapper">
           <h1>Kategori</h1>
         </div>
         <div class="col-md-10 col-lg-10 kategori-widget">

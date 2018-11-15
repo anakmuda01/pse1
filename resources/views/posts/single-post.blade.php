@@ -9,6 +9,7 @@
           {{ucwords($post->judul)}}
         </div>
         <div class="card-body">
+          <p class="card-text atas-post"><i class="fa fa-calendar mr-1"></i>{{$post->tanggal}} <span class="pull-right"><i class="fa fa-user-circle mr-1"></i>{{str_limit($post->user->name,30)}}</span></p>
           {!!$post->isi!!}
         </div>
       </div>

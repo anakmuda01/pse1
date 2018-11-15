@@ -48,7 +48,7 @@
                     @foreach ($posts as $i => $p)
                       <tr class="no-wrap">
                         <td>{{$i+1}}</td>
-                        <td><a target="_blank" href="/posts/{{$p->slug_judul}}"><b>{{$p->judul}}</b></a></td>
+                        <td><a target="_blank" href="/berita/{{$p->slug_judul}}"><b>{{$p->judul}}</b></a></td>
                         <td class="mid">
                           @foreach ($p->tags as $tag)
                             {{$tag->nama_tag}}
