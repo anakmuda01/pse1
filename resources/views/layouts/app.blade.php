@@ -50,7 +50,7 @@
                         <a href="#" class="fa fa-facebook-square rounded"></a>
                       </li>
                       <li>
-                        <a href="#" class="fa fa-youtube rounded"></a>
+                        <a href="https://www.youtube.com/channel/UCOystU7EcxCXvKx3ceJMCLQ" target="_blank" class="fa fa-youtube rounded"></a>
                       </li>
                       <li>
                         <a href="https://www.instagram.com/puskesmas_simpangempat1/" target="_blank" class="fa fa-instagram rounded"></a>
@@ -112,7 +112,7 @@
           <footer id="footer">
             <div class="container">
               <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-8 col-lg-9 foot-widget">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 foot-widget">
                   <a id="foot-link-logo" href="#">
                     <div class="foot-logo col-xs-12 no-pad">
                       <img src="{{asset('img/logo.png')}}" alt="logo-puskes" id="logo-puskes">
@@ -134,12 +134,23 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 foot-widget">
+
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 terkait-foot foot-widget">
+                  <div class="foot-widget-title">Link Terkait</div>
+                  <div class="terkait-wrap mb-4">
+                    <ul>
+                      <li><a class="link-terkait" href="http://bkd.banjarkab.go.id/e-simpeg/" target="_blank"><i class="fa fa-link mr-2"></i>E-Simpeg</a></li>
+                      <li><a class="link-terkait" href="http://renbut.kemkes.go.id/" target="_blank"><i class="fa fa-link mr-2"></i>Analisis Beban Kerja</a></li>
+                        <li><a class="link-terkait" href="https://puskesmassimpangempat.wordpress.com/" target="_blank"><i class="fa fa-link mr-2"></i>Web Lama</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 foot-widget">
                   <div class="foot-widget-title">Media Sosial</div>
                   <div class="sosial-wrap mb-4">
                     <ul>
                       <li><a href="#"><i class="fa fa-facebook fa-2x foot-sosial-icon" ></i></a></li>
-                      <li><a href="#"><i class="fa fa-youtube fa-2x foot-sosial-icon"></i></a></li>
+                      <li><a href="https://www.youtube.com/channel/UCOystU7EcxCXvKx3ceJMCLQ" target="_blank"><i class="fa fa-youtube fa-2x foot-sosial-icon"></i></a></li>
                       <li><a href="https://www.instagram.com/puskesmas_simpangempat1/" target="_blank"><i class="fa fa-instagram fa-2x foot-sosial-icon"></i></a></li>
                     </ul>
                   </div>

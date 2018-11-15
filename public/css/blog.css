@@ -532,7 +532,7 @@ body{
     width: 100%;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.51);
 }
-.recent-post-foot ul, .recent-news-foot ul, .sosial-wrap ul{
+.terkait-foot ul, .recent-news-foot ul, .sosial-wrap ul{
   padding: 0;
   margin: 0;
 }
@@ -560,12 +560,27 @@ body{
   width: 100%;
   float: left;
 }
-.sosial-wrap li {
+.sosial-wrap li{
     background: none;
     float: left;
     margin: 0px;
     padding: 0px 9px 0px 0px;
     list-style-type: none;
+}
+.terkait-wrap li{
+  margin: 0px;
+  padding: 0px 9px 0px 0px;
+  list-style-type: none;
+}
+.link-terkait{
+  font-size: 1em;
+  color: #fff;
+  font-weight: bold;
+}
+.link-terkait:hover{
+  color : #cacf02;
+  text-decoration: none;
+  transition: color 0.5s;
 }
 .foot-sosial-icon {
     font-size: 30px;
